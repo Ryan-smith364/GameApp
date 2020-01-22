@@ -15,10 +15,11 @@ export default class FullCard extends React.Component{
     
         
     render(){
-       console.log(this.props)
+    //    console.log(this.props.game.detail)
         return(
             <div>
-                {this.state.side ? <CardFront game={this.props.game} switchSide={this.switchSide}/> : <CardBack game={this.props.game} switchSide={this.switchSide}/>}
+                {/* <button onClick={this.props.game.removeGame(this.props.game)}> X</button> */}
+                 {this.state.side ? <CardFront game={this.props.game} switchSide={this.switchSide}/> : <CardBack game={this.props.game} switchSide={this.switchSide} getProducer={this.props.getProducer} removeGame={this.props.removeGame}/>}
             </div>
         )
     }
